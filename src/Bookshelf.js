@@ -39,7 +39,7 @@ function Bookshelf() {
 					{getLCValue.length === 0 && <div>No data found</div>}
 
 					{getLCValue?.map((book, index) => (
-						<BookCard key={index} book={book} disable={true} />
+						<BookCard key={index} book={book} />
 					))}
 				</div>
 			)}

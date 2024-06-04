@@ -1,7 +1,7 @@
 import React from "react";
 import { Plus } from "lucide-react";
 
-function BookCard({ book, setLCValue, disable }) {
+function BookCard({ book, setLCValue, disable = true }) {
 	function handleClick() {
 		let obj = {
 			title: book.title,
