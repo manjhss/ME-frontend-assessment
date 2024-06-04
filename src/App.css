@@ -1,38 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Manrope", sans-serif;
+}
+
+body {
+	background: #181818;
+	color: whitesmoke;
+}
+
 .App {
-  text-align: center;
+	width: 80%;
+	margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* UTILS */
+
+h1 a {
+	color: white;
+	text-decoration: none;
+	font-size: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button a {
+	color: black;
+	text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.material-symbols-outlined {
+	font-size: 2.4rem;
 }
 
-.App-link {
-  color: #61dafb;
+.flex {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.my-2 {
+	margin: 2rem 0;
 }
+
+.pt-2 {
+	padding: 2rem;
+}
+
+section {
+	border: 2px dashed;
+	border-radius: 1rem;
+	margin: 1rem 0;
+}
+
+.search-input {
+	padding: 0.8rem;
+
+	background: rgb(40, 40, 40);
+	color: whitesmoke;
+
+	border: 2px solid #565656;
+	border-radius: 0.6rem;
+
+	font-size: 1.2rem;
+}
+
+.search-input:focus {
+	border-color: #aae966;
+	outline: none;
+}
+
+.icon {
+	cursor: pointer;
+}
+
+.book-card-ctn {
+	padding-top: 2rem;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	align-items: start;
+}
+
+.book-card {
+	background: rgb(32, 32, 32);
+
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+
+	padding: 1rem;
+	border: 2px solid whitesmoke;
+	border-radius: 0.6rem;
+}
+
+.book-card div {
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+
+.book-card div span {
+	color: #aae966;
+}
+
+.button {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6rem;
+	align-items: center;
+	justify-content: center;
+
+	padding: 0.6rem;
+
+	border: none;
+	border-radius: 0.6rem;
+
+	background: #aae966;
+	color: black;
+
+	font-weight: 600;
+	font-size: 1.2rem;
+
+	cursor: pointer;
+}
+
+.button:hover {
+	background: #aae966e7;
+}
+
+/* BOOKSHELF */

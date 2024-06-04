@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Bookshelf from "./Bookshelf";
+import Header from "./Header";
+import Search from "./Search";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+if ("my-bookshelf" in localStorage) {
+	console.log("Great to GOOO");
+} else {
+	localStorage.setItem("my-bookshelf", JSON.stringify([]));
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const router = createBrowserRouter([
+		{
+			path: "/",
+			element: <Search />,
+		},
+		{
+			path: "/my-bookshelf",
+			element: <Bookshelf />,
+		},
+	]);
+
+	return (
+		<div className="App">
+			<Header />
+			<RouterProvider router={router} />
+		</div>
+	);
 }
 
 export default App;
