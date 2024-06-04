@@ -47,12 +47,10 @@ button a {
 }
 
 .pt-2 {
-	padding: 2rem;
+	padding: 2rem 0;
 }
 
 section {
-	border: 2px dashed;
-	border-radius: 1rem;
 	margin: 1rem 0;
 }
 
@@ -130,5 +128,3 @@ section {
 .button:hover {
 	background: #aae966e7;
 }
-
-/* BOOKSHELF */

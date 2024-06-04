@@ -23,6 +23,7 @@ function QueryInput({ fetchData, setBooksData }) {
 				className="search-input"
 				placeholder="e.g. Harry Potter"
 				onChange={(e) => setSearchTerm(e.target.value)}
+				autoFocus
 			/>
 		</div>
 	);
