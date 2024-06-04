@@ -1,7 +1,11 @@
-import React from "react";
-import { Plus } from "lucide-react";
+import React, { useState } from "react";
+import { Plus, Check } from "lucide-react";
 
 function BookCard({ book, setLCValue, disable = true }) {
+	const [isAddedInBookshelf, setIsAddedInBookshelf] = useState(false);
+
+	console.log(isAddedInBookshelf);
+
 	function handleClick() {
 		let obj = {
 			title: book.title,
@@ -9,6 +13,7 @@ function BookCard({ book, setLCValue, disable = true }) {
 		};
 
 		setLCValue(obj);
+		setIsAddedInBookshelf(true);
 	}
 
 	return (
@@ -22,7 +27,11 @@ function BookCard({ book, setLCValue, disable = true }) {
 
 			{!disable && (
 				<button className="button" onClick={handleClick}>
-					<Plus strokeWidth={3} />
+					{isAddedInBookshelf === false ? (
+						<Plus strokeWidth={3} />
+					) : (
+						<Check strokeWidth={3} />
+					)}
 					Bookshelf
 				</button>
 			)}
