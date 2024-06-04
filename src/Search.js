@@ -20,6 +20,7 @@ function Search() {
 
 	function fetchData(query) {
 		setLoading(true);
+		setError(null);
 		setBooksData([]);
 
 		fetch(`https://openlibrary.org/search.json?q=${query}&limit=10&page=1`)
